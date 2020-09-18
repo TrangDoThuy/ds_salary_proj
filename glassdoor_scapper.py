@@ -3,6 +3,7 @@
 Created on Fri Sep 18 14:09:49 2020
 
 @author: trang
+url: https://github.com/arapfaik/scraping-glassdoor-selenium
 """
 
 
