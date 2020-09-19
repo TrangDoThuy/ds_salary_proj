@@ -78,3 +78,14 @@ print(mean_absolute_error(y_test,tpred_ln))
 print(mean_absolute_error(y_test,tpred_rf))
 
 print(mean_absolute_error(y_test,(tpred_ln+tpred_rf)/2))
+#%%
+import pickle
+pickl ={'model':gs.best_estimator_}
+pickle.dump(pickl,open('model_file'+".p","wb"))
+
+file_name ="model_file.p"
+with open(file_name,'rb') as pickled:
+    data = pickle.load(pickled)
+    model = data['model']
+
+model
