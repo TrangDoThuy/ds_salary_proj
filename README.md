@@ -1,6 +1,72 @@
-# ds_salary_proj
+# Software Engineer Salary Estimator: Project Overview
+* Created a tool that estimates software engineer salaries to help software engineers negotiate their income when they get a job.
+* Scrapped over 1000 job descriptions from Glassdoor using Python and Selenium
+* Engineered features from the text of each job description to quantify the value companies put on Java, Python, Back-end, Web Developer, Mobile Developer, etc.
+* Optimized Linear, Lasso, and Random Forest Regressors using GridsearchCV to reach the best model.
+## Code and Resources Used
 
-## resources:
-https://github.com/arapfaik/scraping-glassdoor-selenium
+* **Python Version**: 3.7
+* **Packages:** pandas, numpy, sklearn, matplotlib, seaborn, selenium
+* **For Web Framework Requirements:** pip install -r requirements.txt
+* **Scraper Github:** https://github.com/arapfaik/scraping-glassdoor-selenium
+* **Scraper Article:** https://towardsdatascience.com/selenium-tutorial-scraping-glassdoor-com-in-10-minutes-3d0915c6d905
+* **Idea of the project based on:** https://github.com/PlayingNumbers/ds_salary_proj
 
-https://towardsdatascience.com/selenium-tutorial-scraping-glassdoor-com-in-10-minutes-3d0915c6d905
+## Web Scrapping
+
+Tweaked the web scraper github repo (above) to scrape 1000 job postings from glassdoor.com. With each job, we got the following:
+
+* Job title
+* Salary Estimate
+* Job Description
+* Rating
+* Company
+* Location
+* Company Headquarters
+* Company Size
+* Company Founded Date
+* Type of Ownership
+* Industry
+* Sector
+* Revenue
+* Competitors
+
+## Data Cleaning
+
+After scraping the data, we make changes and create some new variables to clean up the data:
+
+* Parsed numeric data out of salary
+* Parsed rating out of company text
+* Transformed founded data into age of company
+* Made columns for different categories in the job description:
+  * Java
+  * Python
+  * Back-end
+  * Web Developer
+  * Mobile Developer
+  * AWS
+
+* Created a new column for description length
+
+## EDA
+
+looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables.
+
+## Model Building
+
+Firstly, we transform the categorical variables into dummy variables, then split the data into train and test sets with the train size of 80%
+
+We use three models:
+
+* **Multiple Linear Regression**
+* **Lasso Regression**
+* **Random Forest**
+
+## Model performance
+
+The Random Forest model is outstanding among three models on the test and validation sets.
+
+* **Random Forest**: MAE = 
+* **Linear Regression**: MAE = 
+* **Ridge Regression**: MAE = 
+
