@@ -53,4 +53,4 @@ print(df.cyber_yn.value_counts())
 df['aws_yn'] = df['Job Description'].apply(lambda x: 1 if "aws" in x.lower() else 0)
 print(df.aws_yn.value_counts())
 #%%
-df.to_csv('salary_software_engineer.csv',index=False)
+df.to_csv('salary_data_cleaned.csv',index=False)
