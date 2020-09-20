@@ -31,6 +31,9 @@ Tweaked the web scraper github repo (above) to scrape 1000 job postings from gla
 * Revenue
 * Competitors
 
+![1](https://user-images.githubusercontent.com/30380242/93692468-40a36300-fb26-11ea-98a6-f819ff1523f8.png)
+
+
 ## Data Cleaning
 
 After scraping the data, we make changes and create some new variables to clean up the data:
@@ -50,7 +53,9 @@ After scraping the data, we make changes and create some new variables to clean 
 
 ## EDA
 
-looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables.
+We have a look at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables.
+
+![2](https://user-images.githubusercontent.com/30380242/93692518-e2c34b00-fb26-11ea-82bc-ec57893e70e7.png)
 
 ## Model Building
 
@@ -66,7 +71,7 @@ We use three models:
 
 The Random Forest model is outstanding among three models on the test and validation sets.
 
-* **Random Forest**: MAE = 
-* **Linear Regression**: MAE = 
-* **Ridge Regression**: MAE = 
+* **Random Forest**: 
+* **Linear Regression**: 
+* **Ridge Regression**: 
 
