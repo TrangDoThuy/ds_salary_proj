@@ -88,4 +88,3 @@ with open(file_name,'rb') as pickled:
     data = pickle.load(pickled)
     model = data['model']
 
-model
